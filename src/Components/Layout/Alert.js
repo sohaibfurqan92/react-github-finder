@@ -6,11 +6,13 @@ const Alert = () => {
 
   const {alert} = alertContext;
   
-  return (
-    <div className={`alert alert-${alert.type}`}>
+   return  (
+     alert!==null && (
+      <div className={`alert alert-${alert.type}`}>
       <i className='fas fa-info-circle'> {alert.msg}</i>
     </div>
+     )
   )
 }
 
-export default Alert
+export default Alert;

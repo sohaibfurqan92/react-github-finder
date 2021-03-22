@@ -15,12 +15,12 @@ const {searchUsers,clearUsers, users} = githubContext;
   };
 
   const onSubmit = (e) =>{
-    if(text==''){
+    if(text===''){
       alertContext.setAlert('Please enter something','light');
-      return;
-    }
+    } else{
       searchUsers(text);
-    setText('');
+      setText('');
+    }
     e.preventDefault();
   }
 
